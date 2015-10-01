@@ -17,7 +17,7 @@ public class Ex5 {
      * @return 重複していない数字のリスト
      */
     public List<Integer> unique(final int... args) {
-    	List resultList = new ArrayList<Integer>();
+    	List<Integer> resultList = new ArrayList<Integer>();
 
     	for (int i= 0; i< args.length; i++ ) {
 
