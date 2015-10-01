@@ -1,5 +1,8 @@
 package ex6;
 
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class Ex6Test {
@@ -14,6 +17,7 @@ public class Ex6Test {
      */
     @Test
     public void testCount() throws Exception {
-
+    	Ex6 ex6 = new Ex6();
+    	assertThat(ex6.count("1 3 5 3 7 3 1 1 5"), is("1(3) 3(3) 5(2) 7(1)") );
     }
 }

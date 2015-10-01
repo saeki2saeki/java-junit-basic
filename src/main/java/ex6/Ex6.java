@@ -1,5 +1,7 @@
 package ex6;
 
+import java.util.Arrays;
+
 public class Ex6 {
     /**
      * 例題6
@@ -14,6 +16,29 @@ public class Ex6 {
      * @return それぞれの数字の出現数の文字列
      */
     public String count(final String input) {
-        return "";
+    	String result = "";
+
+    	String[] list =input.split(" ");
+    	Arrays.sort(list);
+
+    	String tempnum = "";
+    	int tempnum_cnt = 1;
+
+    	for(int i = 0; i < list.length; i ++) {
+    		if (tempnum.equals(list[i])){
+    			tempnum_cnt++;
+    		} else {
+    			if (i != 0) {
+        			result =  result + tempnum + "(" + tempnum_cnt + ") ";
+    			}
+        			tempnum = list[i];
+        			tempnum_cnt = 1;
+    		}
+    	}
+		result = result + tempnum + "(" + tempnum_cnt + ")";
+
+
+        return result;
     }
 }
+
