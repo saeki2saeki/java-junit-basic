@@ -14,6 +14,12 @@ public class Ex3 {
      * @return 最も小さな数字
      */
     public int min(final int... args) {
-        return 0;
+    	int result = Integer.MAX_VALUE;
+    	for(int i = 0; i < args.length; i ++) {
+    		if (args[i] < result) {
+    			result = args[i];
+    		}
+    	}
+        return result;
     }
 }

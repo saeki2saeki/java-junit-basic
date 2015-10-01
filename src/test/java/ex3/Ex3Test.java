@@ -1,8 +1,9 @@
 package ex3;
 
-import org.junit.Test;
-
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 public class Ex3Test {
     /**
@@ -16,6 +17,7 @@ public class Ex3Test {
      */
     @Test
     public void testMin() throws Exception {
-
+        Ex3 ex3 = new Ex3();
+        assertThat(ex3.min(100, 20, 5, 1, 200, 5), is(1));
     }
 }
