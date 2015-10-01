@@ -17,6 +17,25 @@ public class Ex5 {
      * @return 重複していない数字のリスト
      */
     public List<Integer> unique(final int... args) {
-        return new ArrayList<>();
+    	List resultList = new ArrayList<Integer>();
+
+    	for (int i= 0; i< args.length; i++ ) {
+
+    		boolean uniqflg = true;
+
+    		for (int j = 0; j < resultList.size(); j ++ ) {
+    			if (((Integer)resultList.get(j)).intValue() == args[i]){
+    				uniqflg = false;
+    				continue;
+    			}
+    		}
+
+    		if(uniqflg) {
+				resultList.add(args[i]);
+    		}
+
+    	}
+
+    	return resultList;
     }
 }
